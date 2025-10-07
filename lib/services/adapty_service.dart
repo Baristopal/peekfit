@@ -1,12 +1,13 @@
 import 'package:adapty_flutter/adapty_flutter.dart';
+import '../config/env_config.dart';
 
 class AdaptyService {
   static final AdaptyService _instance = AdaptyService._internal();
   factory AdaptyService() => _instance;
   AdaptyService._internal();
 
-  // Adapty Public Key
-  static const String _publicKey = 'public_live_4sLGzObN.ZxoETApXu8wxcmVAXIYf';
+  // Adapty Public Key from config
+  static String get _publicKey => EnvConfig.adaptyPublicKey;
 
   bool _isInitialized = false;
 

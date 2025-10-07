@@ -1,118 +1,61 @@
-# PeekFit - Sanal Kıyafet Deneme Uygulaması
+# 👗 PeekFit
 
-PeekFit, kullanıcıların kıyafetleri sanal olarak deneyebileceği, gardıroplarını yönetebileceği ve ürün fiyat takibi yapabileceği modern bir mobil uygulamadır.
+**AI destekli sanal kıyafet deneme ve gardırop yönetim uygulaması**
 
-## 🌟 Özellikler
+PeekFit ile kıyafetleri satın almadan önce üzerinizde nasıl durduğunu görün, dijital gardırobunuzu oluşturun ve stilinizi keşfedin.
 
-### 📸 Sanal Kıyafet Deneme
-- Kendi fotoğrafınızı yükleyin
-- Kıyafet resmini fotoğraf, galeri veya URL ile ekleyin
-- Yapay zeka ile kıyafeti üzerinizde görün
-- Denenen kıyafetleri gardıroba ekleme
+## ✨ Neler Yapabilirsiniz?
 
-### 👔 Dijital Gardırop
-- Kıyafetlerinizi kategorilere göre organize edin
-- Her ürün için detaylı bilgi saklayın
-- Marka, kategori ve ürün linki ekleme
+### 🎯 Sanal Deneme
+Kıyafetleri satın almadan önce üzerinizde nasıl durduğunu görün. Fotoğrafınızı yükleyin, beğendiğiniz kıyafetin linkini ekleyin ve AI sihriyle kendinizi o kıyafette görün.
 
-### 📊 Fiyat & Stok Takibi
-- Ürün linklerini ekleyerek fiyat takibi yapın
-- Stok durumunu kontrol edin
-- Link eklenmemiş ürünler için uyarılar
+### 👕 Gardırop Yönetimi
+Tüm kıyafetlerinizi tek bir yerde toplayın. Kategorilere ayırın, marka ve fiyat bilgilerini ekleyin, gardırobunuzu dijital ortamda organize edin.
+
+### 📊 Fiyat Takibi
+Beğendiğiniz ürünlerin linklerini ekleyin, fiyat değişimlerini takip edin. Hangi ürünlerin linkini eklemeyi unuttuğunuzu hatırlatan bildirimler alın.
 
 ### 📏 Beden Önerileri
-- Boy, kilo ve vücut ölçülerinizi girin
-- Otomatik beden hesaplama
-- Kişiselleştirilmiş beden önerileri
+Vücut ölçülerinizi girin, size özel beden önerileri alın. Artık hangi bedeni alacağınızı tahmin etmeye gerek yok.
 
-### 📜 Deneme Geçmişi
-- Tüm deneme aktivitelerinizi görüntüleyin
-- Tarih bazlı filtreleme
-- Geçmiş kayıtlarını yönetme
+### 📜 Geçmiş
+Daha önce denediğiniz tüm kıyafetleri görün. Hangi kombinasyonları denediğinizi, ne zaman denediğinizi takip edin.
 
-### 🌓 Dark Mode
-- Tam dark mode desteği
-- Siyah-beyaz minimal tasarım
-- iOS standartlarında modern UI
+### 🌓 Modern Tasarım
+Siyah-beyaz minimal tasarım, dark mode desteği ve iOS standartlarında modern bir kullanıcı deneyimi.
 
-## 🚀 Kurulum
+## 🚀 Hızlı Başlangıç
 
-### Gereksinimler
-- Flutter SDK (3.9.2 veya üzeri)
-- Dart SDK
-- Android Studio / Xcode (platform bazlı)
-
-### Bağımlılıkları Yükleme
 ```bash
+# Projeyi klonlayın
+git clone https://github.com/Baristopal/peekfit.git
+cd peekfit
+
+# Bağımlılıkları yükleyin
 flutter pub get
-```
 
-### Uygulamayı Çalıştırma
-```bash
+# Uygulamayı çalıştırın
 flutter run
 ```
 
-## 📱 Desteklenen Platformlar
-- ✅ iOS
-- ✅ Android
-- ✅ Web (sınırlı özellikler)
+## 📱 Platform Desteği
 
-## 🏗️ Proje Yapısı
-```
-lib/
-├── core/
-│   └── theme/           # Tema ve renk tanımlamaları
-├── models/              # Veri modelleri
-├── providers/           # State management (Provider)
-├── screens/             # Uygulama ekranları
-│   ├── auth/           # Giriş ve kayıt
-│   ├── home/           # Ana sayfa
-│   ├── wardrobe/       # Gardırop yönetimi
-│   ├── history/        # Geçmiş
-│   ├── profile/        # Profil ve ayarlar
-│   ├── try_on/         # Kıyafet deneme
-│   ├── welcome/        # Karşılama ekranı
-│   └── onboarding/     # Onboarding
-└── main.dart           # Uygulama giriş noktası
-```
+- ✅ **iOS** - iPhone ve iPad
+- ✅ **Android** - Tüm Android cihazlar
 
-## 🎨 Tasarım
-- **Renk Paleti**: Siyah-Beyaz minimal tasarım
-- **Font**: Inter (Google Fonts)
-- **UI Framework**: Material Design 3
-- **Stil**: iOS standartları, modern ve temiz
+## 🎨 Ekran Görüntüleri
 
-## 📦 Kullanılan Paketler
-- `provider` - State management
-- `google_fonts` - Özel fontlar
-- `image_picker` - Kamera ve galeri erişimi
-- `shared_preferences` - Yerel veri saklama
-- `url_launcher` - URL açma
-- `cached_network_image` - Resim önbellekleme
-- `smooth_page_indicator` - Sayfa göstergeleri
-- `intl` - Tarih formatlama
+*Yakında eklenecek*
 
-## 🔐 İzinler
+## 🛠️ Teknolojiler
 
-### Android
-- İnternet erişimi
-- Kamera erişimi
-- Depolama okuma/yazma
-
-### iOS
-- Kamera kullanımı
-- Fotoğraf kütüphanesi erişimi
-
-## 📄 Lisans
-Bu proje özel bir projedir.
-
-## 👨‍💻 Geliştirici
-PeekFit Team
-
-## 📞 İletişim
-- App ID: `com.peekfit.app`
-- Version: 1.0.0
+- **Flutter** - Cross-platform mobil uygulama geliştirme
+- **Provider** - State management
+- **AI Image Processing** - Sanal deneme için yapay zeka
+- **Material Design 3** - Modern UI/UX
 
 ---
 
-**Not**: Bu uygulama 2025 tasarım trendlerine uygun olarak geliştirilmiştir.
+<p align="center">
+  <i>2025 tasarım trendleriyle geliştirilmiştir</i>
+</p>
