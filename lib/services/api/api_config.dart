@@ -4,7 +4,7 @@ class ApiConfig {
   // For iOS Simulator: use localhost or 127.0.0.1
   // For Production: use actual server URL
   
-  static const bool useLocalApi = true; // Set to false for production
+  static const bool useLocalApi = false; // Set to false for production
   
   static const String localBaseUrl = 'http://10.0.2.2:5001/api'; // Android Emulator (HTTP Port: 5001)
   static const String productionBaseUrl = 'https://peekfitbackend-production.up.railway.app/api';
