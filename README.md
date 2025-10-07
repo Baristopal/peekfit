@@ -43,9 +43,20 @@ flutter run
 - ✅ **iOS** - iPhone ve iPad
 - ✅ **Android** - Tüm Android cihazlar
 
-## 🎨 Ekran Görüntüleri
+## 📸 Ekran Görüntüleri
 
-*Yakında eklenecek*
+<div align="center">
+  <img src="screenshots/home.jpg" width="200" alt="Ana Sayfa"/>
+  <img src="screenshots/try-on-interface.jpg" width="200" alt="Sanal Deneme Arayüzü"/>
+  <img src="screenshots/result-1.jpg" width="200" alt="Deneme Sonucu 1"/>
+  <img src="screenshots/result-2.jpg" width="200" alt="Deneme Sonucu 2"/>
+  <img src="screenshots/wardrobe.jpg" width="200" alt="Gardırop"/>
+</div>
+
+### 🎯 Özellikler
+- **Before/After Karşılaştırma**: Orijinal fotoğrafınızla AI sonucunu yan yana görün
+- **Kolay Arayüz**: Fotoğraf ve kıyafet seçimi sadece birkaç dokunuşla
+- **Gardırop Yönetimi**: Tüm kıyafetlerinizi düzenli bir şekilde saklayın
 
 ## 🛠️ Teknolojiler
 
