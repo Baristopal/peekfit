@@ -1,0 +1,5 @@
+package com.peekfit.app
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity : FlutterActivity()

@@ -1,0 +1,123 @@
+import '../models/clothing_item.dart';
+
+class SampleDataService {
+  static List<ClothingItem> getSampleClothes() {
+    return [
+      ClothingItem(
+        id: 'sample_1',
+        name: 'Beyaz Oversize Tişört',
+        imageUrl: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800',
+        category: ClothingCategory.tshirt,
+        brand: 'Zara',
+        productUrl: 'https://www.zara.com',
+        price: 299.99,
+        inStock: true,
+        addedDate: DateTime.now().subtract(const Duration(days: 5)),
+      ),
+      ClothingItem(
+        id: 'sample_2',
+        name: 'Siyah Slim Fit Kot Pantolon',
+        imageUrl: 'https://images.unsplash.com/photo-1542272604-787c3835535d?w=800',
+        category: ClothingCategory.pants,
+        brand: 'Levi\'s',
+        productUrl: 'https://www.levis.com',
+        price: 599.99,
+        inStock: true,
+        addedDate: DateTime.now().subtract(const Duration(days: 3)),
+      ),
+      ClothingItem(
+        id: 'sample_3',
+        name: 'Kahverengi Deri Ceket',
+        imageUrl: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800',
+        category: ClothingCategory.jacket,
+        brand: 'Mango',
+        productUrl: 'https://www.mango.com',
+        price: 1299.99,
+        inStock: false,
+        addedDate: DateTime.now().subtract(const Duration(days: 7)),
+      ),
+      ClothingItem(
+        id: 'sample_4',
+        name: 'Beyaz Klasik Gömlek',
+        imageUrl: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800',
+        category: ClothingCategory.shirt,
+        brand: 'H&M',
+        productUrl: 'https://www.hm.com',
+        price: 399.99,
+        inStock: true,
+        addedDate: DateTime.now().subtract(const Duration(days: 2)),
+      ),
+      ClothingItem(
+        id: 'sample_5',
+        name: 'Siyah Spor Ayakkabı',
+        imageUrl: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800',
+        category: ClothingCategory.shoes,
+        brand: 'Nike',
+        productUrl: 'https://www.nike.com',
+        price: 899.99,
+        inStock: true,
+        addedDate: DateTime.now().subtract(const Duration(days: 1)),
+      ),
+      ClothingItem(
+        id: 'sample_6',
+        name: 'Mavi Denim Ceket',
+        imageUrl: 'https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=800',
+        category: ClothingCategory.jacket,
+        brand: 'Pull&Bear',
+        productUrl: 'https://www.pullandbear.com',
+        price: 499.99,
+        inStock: true,
+        addedDate: DateTime.now().subtract(const Duration(days: 4)),
+      ),
+    ];
+  }
+
+  static List<ClothingItem> getRecommendedClothes() {
+    return [
+      ClothingItem(
+        id: 'rec_1',
+        name: 'Gri Kapüşonlu Sweatshirt',
+        imageUrl: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800',
+        category: ClothingCategory.tshirt,
+        brand: 'Adidas',
+        productUrl: 'https://www.adidas.com',
+        price: 449.99,
+        inStock: true,
+        addedDate: DateTime.now(),
+      ),
+      ClothingItem(
+        id: 'rec_2',
+        name: 'Lacivert Chino Pantolon',
+        imageUrl: 'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=800',
+        category: ClothingCategory.pants,
+        brand: 'Massimo Dutti',
+        productUrl: 'https://www.massimodutti.com',
+        price: 549.99,
+        inStock: true,
+        addedDate: DateTime.now(),
+      ),
+      ClothingItem(
+        id: 'rec_3',
+        name: 'Siyah Deri Mont',
+        imageUrl: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800',
+        category: ClothingCategory.jacket,
+        brand: 'Zara',
+        productUrl: 'https://www.zara.com',
+        price: 899.99,
+        inStock: true,
+        addedDate: DateTime.now(),
+      ),
+      ClothingItem(
+        id: 'rec_4',
+        name: 'Siyah Bomber Ceket',
+        imageUrl: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800',
+        category: ClothingCategory.jacket,
+        brand: 'Bershka',
+        productUrl: 'https://www.bershka.com',
+        price: 799.99,
+        inStock: true,
+        addedDate: DateTime.now(),
+      ),
+    ];
+  }
+}
