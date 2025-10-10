@@ -32,10 +32,6 @@ target 'Runner' do
   use_modular_headers!
 
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
-  
-  # Permission Handler - only include needed permissions
-  permissions_path = File.join(File.dirname(`node --print "require.resolve('permission_handler_apple/package.json')"`), 'ios')
-  pod 'permission_handler_apple', :path => File.join(File.dirname(__FILE__), '.symlinks', 'plugins', 'permission_handler_apple', 'ios')
 end
 
 post_install do |installer|
