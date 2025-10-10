@@ -46,13 +46,11 @@
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>Kıyafet deneme için fotoğraf çekmemiz gerekiyor</string>
+	<string>$(NSCameraUsageDescription)</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Galeriden fotoğraf seçmeniz için izin gerekiyor</string>
+	<string>$(NSPhotoLibraryUsageDescription)</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Fotoğrafları galerinize kaydetmek için izin gerekiyor</string>
-	<key>NSUserNotificationsUsageDescription</key>
-	<string>Fiyat ve stok güncellemeleri için bildirim iznine ihtiyacımız var</string>
+	<string>$(NSPhotoLibraryAddUsageDescription)</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 </dict>
