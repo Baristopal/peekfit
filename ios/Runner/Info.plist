@@ -46,10 +46,16 @@
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>Kıyafet fotoğrafı çekmek için kamera erişimi gereklidir</string>
+	<string>PeekFit needs camera access to take photos of clothes for virtual try-on</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Kıyafet fotoğrafı seçmek için galeri erişimi gereklidir</string>
+	<string>PeekFit needs photo library access to select clothing images for virtual try-on</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Fotoğrafları kaydetmek için galeri erişimi gereklidir</string>
+	<string>PeekFit needs permission to save try-on results to your photo library</string>
+	<key>NSUserNotificationsUsageDescription</key>
+	<string>PeekFit needs notification access to send you price alerts and wardrobe reminders</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>This identifier will be used to deliver personalized ads to you</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 </dict>
 </plist>

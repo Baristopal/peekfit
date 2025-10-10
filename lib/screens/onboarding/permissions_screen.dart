@@ -40,51 +40,42 @@ class _PermissionsScreenState extends State<PermissionsScreen> {
   }
 
   Future<void> _requestCamera() async {
-    var status = await Permission.camera.status;
-    
-    if (status.isDenied) {
-      status = await Permission.camera.request();
-    }
-    
-    if (status.isPermanentlyDenied) {
-      await openAppSettings();
-    }
+    final status = await Permission.camera.request();
     
     setState(() {
       _cameraGranted = status.isGranted;
     });
-  }
-
-  Future<void> _requestPhotos() async {
-    var status = await Permission.photos.status;
     
-    if (status.isDenied) {
-      status = await Permission.photos.request();
-    }
-    
+    // Only open settings if permanently denied and user taps again
     if (status.isPermanentlyDenied) {
       await openAppSettings();
     }
+  }
+
+  Future<void> _requestPhotos() async {
+    final status = await Permission.photos.request();
     
     setState(() {
       _photosGranted = status.isGranted;
     });
-  }
-
-  Future<void> _requestNotifications() async {
-    var status = await Permission.notification.status;
     
-    if (status.isDenied) {
-      status = await Permission.notification.request();
-    }
-    
+    // Only open settings if permanently denied and user taps again
     if (status.isPermanentlyDenied) {
       await openAppSettings();
     }
+  }
+
+  Future<void> _requestNotifications() async {
+    final status = await Permission.notification.request();
     
     setState(() {
       _notificationsGranted = status.isGranted;
     });
+    
+    // Only open settings if permanently denied and user taps again
+    if (status.isPermanentlyDenied) {
+      await openAppSettings();
+    }
   }
 
   Future<void> _requestAllPermissions() async {
