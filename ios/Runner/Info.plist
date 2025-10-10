@@ -46,11 +46,11 @@
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>$(NSCameraUsageDescription)</string>
+	<string>Camera access is required to take photos of clothes</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>$(NSPhotoLibraryUsageDescription)</string>
+	<string>Photo library access is required to select clothing images</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>$(NSPhotoLibraryAddUsageDescription)</string>
+	<string>Photo library access is required to save try-on results</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 </dict>
