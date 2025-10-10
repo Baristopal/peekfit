@@ -1,0 +1,6 @@
+/* Camera Permission */
+"NSCameraUsageDescription" = "Camera access is required to take photos of clothes";
+
+/* Photo Library Permissions */
+"NSPhotoLibraryUsageDescription" = "Photo library access is required to select clothing images";
+"NSPhotoLibraryAddUsageDescription" = "Photo library access is required to save try-on results";

@@ -1,0 +1,6 @@
+/* Kamera İzni */
+"NSCameraUsageDescription" = "Kıyafet fotoğrafı çekmek için kamera erişimi gereklidir";
+
+/* Fotoğraf Galerisi İzinleri */
+"NSPhotoLibraryUsageDescription" = "Kıyafet fotoğrafı seçmek için galeri erişimi gereklidir";
+"NSPhotoLibraryAddUsageDescription" = "Deneme sonuçlarını kaydetmek için galeri erişimi gereklidir";

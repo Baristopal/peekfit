@@ -41,51 +41,42 @@ class _PermissionsScreenState extends State<PermissionsScreen> {
 
   Future<void> _requestCamera() async {
     final status = await Permission.camera.request();
-    
-    setState(() {
-      _cameraGranted = status.isGranted;
-    });
-    
-    // Only open settings if permanently denied and user taps again
-    if (status.isPermanentlyDenied) {
-      await openAppSettings();
-    }
+    setState(() => _cameraGranted = status.isGranted);
   }
 
   Future<void> _requestPhotos() async {
     final status = await Permission.photos.request();
-    
-    setState(() {
-      _photosGranted = status.isGranted;
-    });
-    
-    // Only open settings if permanently denied and user taps again
-    if (status.isPermanentlyDenied) {
-      await openAppSettings();
-    }
+    setState(() => _photosGranted = status.isGranted);
   }
 
   Future<void> _requestNotifications() async {
     final status = await Permission.notification.request();
-    
-    setState(() {
-      _notificationsGranted = status.isGranted;
-    });
-    
-    // Only open settings if permanently denied and user taps again
-    if (status.isPermanentlyDenied) {
-      await openAppSettings();
-    }
+    setState(() => _notificationsGranted = status.isGranted);
   }
 
   Future<void> _requestAllPermissions() async {
     setState(() => _isLoading = true);
     
-    await _requestCamera();
-    await _requestPhotos();
-    await _requestNotifications();
+    final results = await [
+      Permission.camera,
+      Permission.photos,
+      Permission.notification,
+    ].request();
     
-    setState(() => _isLoading = false);
+    setState(() {
+      _cameraGranted = results[Permission.camera]?.isGranted ?? false;
+      _photosGranted = results[Permission.photos]?.isGranted ?? false;
+      _notificationsGranted = results[Permission.notification]?.isGranted ?? false;
+      _isLoading = false;
+    });
+    
+    // If permanently denied, open settings
+    if (results[Permission.camera]?.isPermanentlyDenied == true ||
+        results[Permission.photos]?.isPermanentlyDenied == true ||
+        results[Permission.notification]?.isPermanentlyDenied == true) {
+      await openAppSettings();
+      return;
+    }
     
     if (_cameraGranted && _photosGranted && _notificationsGranted) {
       widget.onComplete();
