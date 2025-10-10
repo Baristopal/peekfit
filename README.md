@@ -58,12 +58,6 @@ flutter run
 - **Kolay Arayüz**: Fotoğraf ve kıyafet seçimi sadece birkaç dokunuşla
 - **Gardırop Yönetimi**: Tüm kıyafetlerinizi düzenli bir şekilde saklayın
 
-## 🛠️ Teknolojiler
-
-- **Flutter** - Cross-platform mobil uygulama geliştirme
-- **Provider** - State management
-- **AI Image Processing** - Sanal deneme için yapay zeka
-- **Material Design 3** - Modern UI/UX
 
 ---
 
