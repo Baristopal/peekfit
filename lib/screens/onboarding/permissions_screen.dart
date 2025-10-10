@@ -40,21 +40,48 @@ class _PermissionsScreenState extends State<PermissionsScreen> {
   }
 
   Future<void> _requestCamera() async {
-    final status = await Permission.camera.request();
+    var status = await Permission.camera.status;
+    
+    if (status.isDenied) {
+      status = await Permission.camera.request();
+    }
+    
+    if (status.isPermanentlyDenied) {
+      await openAppSettings();
+    }
+    
     setState(() {
       _cameraGranted = status.isGranted;
     });
   }
 
   Future<void> _requestPhotos() async {
-    final status = await Permission.photos.request();
+    var status = await Permission.photos.status;
+    
+    if (status.isDenied) {
+      status = await Permission.photos.request();
+    }
+    
+    if (status.isPermanentlyDenied) {
+      await openAppSettings();
+    }
+    
     setState(() {
       _photosGranted = status.isGranted;
     });
   }
 
   Future<void> _requestNotifications() async {
-    final status = await Permission.notification.request();
+    var status = await Permission.notification.status;
+    
+    if (status.isDenied) {
+      status = await Permission.notification.request();
+    }
+    
+    if (status.isPermanentlyDenied) {
+      await openAppSettings();
+    }
+    
     setState(() {
       _notificationsGranted = status.isGranted;
     });
