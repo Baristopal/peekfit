@@ -41,29 +41,20 @@ class _PermissionsScreenState extends State<PermissionsScreen> {
 
   Future<void> _requestCamera() async {
     final status = await Permission.camera.request();
+    print('Camera permission status: $status');
     setState(() => _cameraGranted = status.isGranted);
-    
-    if (status.isPermanentlyDenied) {
-      await openAppSettings();
-    }
   }
 
   Future<void> _requestPhotos() async {
     final status = await Permission.photos.request();
+    print('Photos permission status: $status');
     setState(() => _photosGranted = status.isGranted);
-    
-    if (status.isPermanentlyDenied) {
-      await openAppSettings();
-    }
   }
 
   Future<void> _requestNotifications() async {
     final status = await Permission.notification.request();
+    print('Notification permission status: $status');
     setState(() => _notificationsGranted = status.isGranted);
-    
-    if (status.isPermanentlyDenied) {
-      await openAppSettings();
-    }
   }
 
   Future<void> _requestAllPermissions() async {
@@ -75,6 +66,8 @@ class _PermissionsScreenState extends State<PermissionsScreen> {
       Permission.notification,
     ].request();
     
+    print('All permissions results: $results');
+    
     setState(() {
       _cameraGranted = results[Permission.camera]?.isGranted ?? false;
       _photosGranted = results[Permission.photos]?.isGranted ?? false;
@@ -82,11 +75,34 @@ class _PermissionsScreenState extends State<PermissionsScreen> {
       _isLoading = false;
     });
     
-    // If permanently denied, open settings
-    if (results[Permission.camera]?.isPermanentlyDenied == true ||
-        results[Permission.photos]?.isPermanentlyDenied == true ||
-        results[Permission.notification]?.isPermanentlyDenied == true) {
-      await openAppSettings();
+    // Check if any permission is permanently denied
+    final anyPermanentlyDenied = results.values.any((status) => status.isPermanentlyDenied);
+    
+    if (anyPermanentlyDenied && mounted) {
+      final l10n = AppLocalizations.of(context)!;
+      
+      // Show dialog asking user to go to settings
+      final shouldOpenSettings = await showDialog<bool>(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: const Text('Permission Denied'),
+          content: const Text('Some permissions were denied. Please enable them in Settings to use all features.'),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context, false),
+              child: const Text('Cancel'),
+            ),
+            TextButton(
+              onPressed: () => Navigator.pop(context, true),
+              child: const Text('Open Settings'),
+            ),
+          ],
+        ),
+      );
+      
+      if (shouldOpenSettings == true) {
+        await openAppSettings();
+      }
       return;
     }
     
